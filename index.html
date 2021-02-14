@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RSP Game">
+  <meta property="og:title" content="RSP Game">
+  <meta property="og:description" content="가위바위보 게임에서 네오를 이겨라!!">
+  <meta property="og:image" content="http://tempus707.dothome.co.kr/images/og.png">
+  <meta property="og:url" content="http://tempus707.dothome.co.kr/">
+
+  <title>RSP Game</title>
+  <link rel="stylesheet" href="rsp.css">
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <script src="rsp.js" defer></script>
+</head>
+<y>
+  <!-- 전체 컨테이너 -->
+  <div class="board">
+    <!-- 이름과 이미지 -->
+    <div class="board-1">
+      <div class="user">
+        <div class="user-name">라이언</div>
+        <div class="image user-image"></div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="rival">
+        <div class="rival-name">네오</div>
+        <div class="image rival-image"></div>
+      </div>
+    </div>
+    <!-- 레이스 -->
+    <div class="board-2">
+      <div class="race">
+        <div class="runner user-runner"></div>
+        <div class="runner rival-runner"></div>
+        <div class="point point-1"></div>
+        <div class="point point-2"></div>
+        <div class="point point-3"></div>
+        <div class="point point-4">Goal</div>
+      </div>
+    </div>
+    <!-- 버튼 조작  -->
+    <div class="board-3">
+      <div class="control">
+        <button class="btn scissor-btn">가위</button>
+        <button class="btn rock-btn">바위</button>
+        <button class="btn paper-btn">보</button>
+      </div>
+      <button class="btn start-btn">시작</button>
+    </div>
+  <div class="result"></div>
+  </div>
+</body>
+</html>

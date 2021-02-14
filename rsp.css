@@ -1,0 +1,225 @@
+:root {
+  /* Color */
+  --rad-color: #ef476f;
+  --orange-color: #fe7f2d;
+  --yellow-color: #ffd166;
+  --green-color: #06d6a0;
+  --background-color: #faedcb;
+}
+
+body, .btn {
+  font-family: 'Do Hyeon', sans-serif;
+  user-select: none;
+}
+
+/* 전체 컨테이너 */
+.board {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 800px;
+  height: 650px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: var(--background-color);
+}
+
+/* 가위바위보 결과  */
+.result {
+  margin: 0 auto;
+  position: relative;
+  bottom: 600px;
+  width: 150px;
+  height: 60px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+}
+/* 가위바위보 완료시에만 result 표시 */
+.visible {
+  visibility: hidden;
+}
+
+/*
+***********
+ 화면  부분 
+***********
+*/
+.board-1 {
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* 캐릭터 기본 이미지  */
+.image {
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.5);
+}
+.image:hover {
+  transform: scale(1.025);
+}
+
+/* Lion 이미지 */
+.user-image {
+  background: no-repeat center/250px url(./images/user.png) var(--yellow-color);
+}
+
+/* Neo 이미지 */
+.rival-image {
+  background: no-repeat center/250px url(./images/rival.png) var(--green-color);
+}
+
+/* 바위 이미지 */
+.rock-image {
+  background: no-repeat center/250px url(./images/rock.png) var(--green-color);
+}
+
+/* 가위 이미지 */
+.scissor-image {
+  background: no-repeat center/250px url(./images/scissor.png) var(--orange-color);
+}
+
+/* 보 이미지 */
+.paper-image {
+  background: no-repeat center/250px url(./images/paper.png) var(--yellow-color);
+}
+
+.user, .rival {
+  text-align: center;
+}
+
+/*
+***********
+레이스 부분 
+***********
+*/
+.board-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+}
+
+/* 레이스 트랙 */
+.race {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 720px;
+  height: 40px;
+  background-color: #dc2f02;
+  border: 1px solid black;
+  box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.5);
+}
+
+/* 기본 레이싱 캐릭터 */
+.runner {
+  position: absolute;
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  bottom: 10px;
+  transition: .5s cubic-bezier(0, 0, 0.04, 1.18);
+}
+
+.runner:hover {
+  transform: scale(1.05);
+}
+/* Lion runner */
+.user-runner {
+  background: no-repeat center/70px url(./images/user.png);
+  left: 5px;
+}
+/* Neo runner */
+.rival-runner {
+  background: no-repeat center/80px url(./images/rival.png);
+  left: -40px;
+}
+
+/* 트랙 포인트  */
+.point {
+  width: 50px;
+  height: 40px;
+  background-color: whitesmoke;
+  text-align: center;
+  line-height: 40px;
+}
+/* 승리시 Lion과 Neo의 이동 위치  */
+.user-win-1 {
+  left: 170px;
+}
+
+.user-win-2 {
+  left: 450px; 
+}
+
+.rival-win-1 {
+  left: 220px;
+}
+
+.rival-win-2 {
+  left:400px; 
+}
+/* 최종 승리시 이동 위치 */
+.final-win {
+  left: 650px;
+}
+
+/*
+***********
+ 조작 부분 
+***********
+*/
+.board-3 {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* 조작 부분 버튼  */
+.btn {
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  font-size: 28px;
+  margin: 15px;
+  box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.5);
+}
+.btn:hover {
+  transform: scale(1.025);
+}
+
+.btn:focus {
+  outline: none;
+}
+/* 가위 바위 보 버튼 */
+.rock-btn {
+  background-color: var(--green-color);
+}
+.scissor-btn {
+  background-color: var(--orange-color);
+}
+.paper-btn {
+  background-color: var(--yellow-color);
+}
+/* 시작 버튼 */
+.start-btn {
+  width: 100px;
+  height: 60px;
+  background-color: var(--rad-color);
+}
+/* Lion과 Neo의  title과 vs  */
+.user-name, .vs, .rival-name {
+  font-size: 36px;
+}
